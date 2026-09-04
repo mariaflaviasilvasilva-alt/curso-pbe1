@@ -1,0 +1,19 @@
+=== Teste de Seguranca - Fri Aug  7 11:35:10 PM UTC 2026 ===
+
+--- Tentativa 1 (SEM API Key) ---
+{"erro":"Acesso nao autorizado. Header 'X-API-KEY' invalido ou ausente."}
+Status HTTP: 401
+
+--- Tentativa 2 (SEM API Key) ---
+{"erro":"Acesso nao autorizado. Header 'X-API-KEY' invalido ou ausente."}
+Status HTTP: 401
+
+--- Tentativa 3 (SEM API Key) ---
+{"erro":"Acesso nao autorizado. Header 'X-API-KEY' invalido ou ausente."}
+Status HTTP: 401
+
+--- Tentativa 4 (COM API Key valida) ---
+[{"id":1,"nome":"Carlos Silva","cnh":"12345678900","categoria":"E","ativo":true},{"id":2,"nome":"Ana Pereira","cnh":"98765432100","categoria":"D","ativo":true}]
+Status HTTP: 200
+
+=== Fim do teste ===

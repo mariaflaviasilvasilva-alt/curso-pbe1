@@ -1,0 +1,19 @@
+===== Teste CRUD - Thu Aug  6 10:29:21 PM UTC 2026 =====
+
+--- Cadastrando veiculo 1 (Iveco Tector) ---
+{"id":3,"placa":"IVC-1001","montadora":"Iveco","modelo":"Tector","status":"DISPONIVEL"}
+HTTP_STATUS:201
+
+--- Cadastrando veiculo 2 (DAF XF) ---
+{"id":4,"placa":"DAF-2002","montadora":"DAF","modelo":"XF","status":"DISPONIVEL"}
+HTTP_STATUS:201
+
+--- Atualizando status do veiculo ID 3 para EM_ROTA ---
+{"mensagem":"Status atualizado com sucesso!","veiculo":{"id":3,"placa":"IVC-1001","montadora":"Iveco","modelo":"Tector","status":"EM_ROTA"}}
+HTTP_STATUS:200
+
+--- Deletando veiculo ID 4 ---
+{"mensagem":"Veiculo ID 4 removido com sucesso."}
+HTTP_STATUS:200
+
+--- Teste finalizado ---
