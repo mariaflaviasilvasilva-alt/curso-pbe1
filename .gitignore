@@ -4,3 +4,5 @@ node_modules/
 **/.env
 processos.log
 **/processos.log
+health_check.log
+**/health_check.log
