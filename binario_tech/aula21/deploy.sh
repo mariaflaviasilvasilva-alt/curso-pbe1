@@ -24,6 +24,10 @@ HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:$PORT/api/
 
 if [ "$HTTP_STATUS" -eq 200 ]; then
   echo -e "\n[SUCESSO] Deploy realizado e verificado com sucesso! HTTP Status 200."
+  
+  # EXERCÍCIO 2 
+  echo "$(date '+%Y-%m-%d %H:%M:%S') - Deploy com sucesso! Commit: $(git rev-parse --short HEAD)" >> deploy_history.log
+  
   pm2 list | grep $APP_NAME
 else
   echo -e "\n[FALHA] Smoke Test falhou com status $HTTP_STATUS! Verifique os logs do PM2."
