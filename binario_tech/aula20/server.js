@@ -1,9 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3024;
+const PORT = 8080;
 
-app.use(express.json());
+// === EXERCÍCIO 2: Limita o tamanho do payload para 2MB ===
+app.use(express.json({ limit: '2mb' }));
 
 // Rota Interna para inspeção do Header de Proxy enviado pelo Nginx
 app.get('/api/v1/proxy/info', (req, res) => {
@@ -14,6 +15,14 @@ app.get('/api/v1/proxy/info', (req, res) => {
     hostHeader: req.headers['host'],
     portaInternaNode: PORT,
     timestamp: new Date()
+  });
+});
+
+// === AJUSTADO PARA POST: Aceita requisições POST para validar o limite ===
+app.post('/status-nginx', (req, res) => {
+  res.json({
+    status: "OK",
+    service: "nginx-proxy"
   });
 });
 

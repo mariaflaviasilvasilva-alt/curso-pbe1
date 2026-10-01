@@ -1,0 +1,5 @@
+127.0.0.1 - - [01/Oct/2026:13:30:01] "GET /api/v1/proxy/info HTTP/1.1" 200 156
+127.0.0.1 - - [01/Oct/2026:13:31:12] "GET /status-nginx HTTP/1.1" 200 42
+127.0.0.1 - - [01/Oct/2026:13:32:45] "GET /rota-errada HTTP/1.1" 404 156
+127.0.0.1 - - [01/Oct/2026:13:33:20] "POST /api/v1/upload HTTP/1.1" 500 89
+127.0.0.1 - - [01/Oct/2026:13:34:05] "GET /api/v1/proxy/info HTTP/1.1" 200 156
