@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOG_FILE="audit_seguranca.log"
-URL="http://localhost:3000/api/v1/motoristas"
+URL="http://localhost:3024/api/v1/motoristas"
 API_KEY_VALIDA="binario-tech-secret-2026"
 
 echo "=== Teste de Seguranca - $(date) ===" > "$LOG_FILE"
